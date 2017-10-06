@@ -23,10 +23,24 @@ app.name // Rafael
 app.age = 23 // cria a propriedade age, porém a propriedade não é reativa
 ```
 
+## Componentes
+
+### Componentes dinâmicos
+
+
 ## VUEX
 Implementação da arquitetura Flux para o Vue. Flux é, a grosso modo, uma arquitetura onde centralizamos o armazenamento de dados na nossa aplicação em um componente global. Esse componente será responsável por alterar o dado e comunicar a todos os componentes que utilizam esse dado da alteração.
 Isso é muito útil quando trabalhamos com aplicações que possuem muitos componentes compartilhando o mesmo dado.
 Multiple views may depend on the same piece of state.
 Actions from different views may need to mutate the same piece of state.
+
+Há algumas vantagens ao se adotar esta abordagem:
+
+    Você tem um local centralizado para adicionar/modificar seus dados;
+    Está disponível para todos os componentes;
+    Nenhum componente modifica a informação diretamente, garantindo a consistência dos dados;
+    Ferramentas adicionais fazem do desenvolvimento uma experiência melhor.
+
+
 
 ### TRABALHANDO COM O VUEX
