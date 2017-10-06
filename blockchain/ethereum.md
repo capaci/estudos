@@ -1,5 +1,3 @@
-# Estudos sobre Blockchain
-
 ## Ethereum
 
 ### Do Whitepaper
@@ -70,11 +68,18 @@ Um contrato é considerado um endereço e, quando recebe ether, pode executar um
 Essa função da DAO não marcava uma proposta como executada antes de enviar o ether, então o que acontecia, é que entrava em loop
 
 
+## File storage
+[Storj](https://storj.io/) foi um dos primeiros sistemas de storage utilizando blockchain, ele trabalha através do StorjCoin(SCJX), que é um token ERC20 na blockchain da Ethereum. Este token é utilizado para pagar pelo armazenamento, agindo como um incentivo para os nodos que mantém os arquivos. Antes de fazer o upload de um arquivo, ele é dividido em blocos menores, os blocos são criptografados e só então distribuido entre vários nodos para ser "guardado".
+
+Temos também o [FileCoin](https://filecoin.io), desenvolvido pelos mesmos criadores do [IPFS](https://ipfs.io)(protocolo p2p para armazenamento de arquivos de uma forma permanente e descentralizada). O Filecoin atua como uma "camada de incentivo" em cima da rede do IPFS. O funcionamento difere do Storj (** TODO Estudar melhor essa diferença **)
+
+No Filecoin, os mineradores são pagos para armazenar e recuperar os arquivos, mas também recebem recompensas de mineração pela aplicação do Proof of Work. Outra coisa a ser notada, é que não existe preço pelo armazenamento do arquivo. Ao invés disso, os usuários e mineradores criam ordens de "compra e venda" de espaço, em uma espécie de exchange descentralizada.
+
 ## Notas
 
-**\*Merkle Tree**: árvore muito utilizada em redes p2p, onde um nodo guarda a hash dos seus filhos. Isso se torna extremamente útil no compartilhamento de arquivos, onde o arquivo é dividido em blocos e é “guardado” nas folhas da árvore. Quando um usuário vai bauxar esse arquivo, ele não precisa baixar o arquivo todo de uma vez, podendo baixar por ramos e, dessa forma, já ir verificando se o ramo que ele está baixando está corrompido, ao invés de baixar o arquivo todo para só então comparar a hash do arquivo recebido com a hash original.
+**\*Merkle Tree**: árvore muito utilizada em redes p2p, onde um nodo guarda a hash dos seus filhos. Isso se torna extremamente útil no compartilhamento de arquivos, onde o arquivo é dividido em blocos e é “guardado” nas folhas da árvore. Quando um usuário vai baixar esse arquivo, ele não precisa baixar o arquivo todo de uma vez, podendo baixar por ramos e, dessa forma, já ir verificando se o ramo que ele está baixando está corrompido, ao invés de baixar o arquivo todo para só então comparar a hash do arquivo recebido com a hash original.
 
-**\**EVM**: Ethereum Virtual Machine, utilizada para rodar a rede blockchain e executar os smart contracts.
+**\*\*EVM**: Ethereum Virtual Machine, utilizada para rodar a rede blockchain e executar os smart contracts.
 
 ## Links úteis
 [quando usar require() ou assert() no contrato](https://ethereum.stackexchange.com/questions/15166/difference-between-require-and-assert-and-the-difference-between-revert-and-thro)
